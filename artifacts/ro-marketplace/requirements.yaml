@@ -1,0 +1,27 @@
+packages:
+  "framer-motion": "For premium page transitions, scroll reveals, and micro-interactions"
+  "react-hook-form": "For robust form state management and validation"
+  "@hookform/resolvers": "Zod resolver for forms"
+  "date-fns": "For human-readable date formatting in bookings and chat"
+  "recharts": "For beautiful earnings charts in the technician dashboard"
+  "clsx": "For dynamic class merging"
+  "tailwind-merge": "For clean tailwind class merging"
+
+images:
+  - path: "artifacts/ro-marketplace/public/images/hero-bg.png"
+    description: "Abstract 3D water purification concept, elegant glass and water splashes, deep teal and clean white gradients, premium studio lighting, hyper-realistic"
+    aspect_ratio: "16:9"
+  - path: "artifacts/ro-marketplace/public/images/tech-bg.png"
+    description: "Abstract isometric 3D composition of tools, gears, and a clipboard, clean white background with soft orange and warm gray accents, modern technical feel"
+    aspect_ratio: "16:9"
+  - path: "artifacts/ro-marketplace/public/images/chat-avatar.png"
+    description: "A cute, friendly, minimalistic 3D robot avatar made of smooth white plastic with a glowing cyan screen face, studio lighting"
+    aspect_ratio: "1:1"
+  - path: "artifacts/ro-marketplace/public/images/water-drop.png"
+    description: "A perfect, hyper-realistic 3D water drop with internal refractions of teal and light blue colors, transparent background"
+    aspect_ratio: "1:1"
+
+notes:
+  - "Assuming customFetch used by Orval hooks uses standard window.fetch. An interceptor is added in App.tsx to inject the JWT token from localStorage into Authorization headers."
+  - "Using wouter for routing. Technician routes are under /technician/*"
+  - "Using framer-motion heavily to achieve the 'premium' and 'beautiful' design constraints."
