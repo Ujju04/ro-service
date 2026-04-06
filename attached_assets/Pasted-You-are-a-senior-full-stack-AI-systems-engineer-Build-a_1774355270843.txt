@@ -1,0 +1,251 @@
+You are a senior full-stack + AI systems engineer.
+
+Build a complete production-ready platform called:
+
+"RO Service Marketplace with Agentic AI Chatbot"
+
+This platform is similar to Urban Company + Instamart, focused on RO water purifier services.
+
+---
+
+## 🧩 CORE REQUIREMENTS
+
+The system must include:
+
+### 1. CUSTOMER PLATFORM (WEB APP)
+
+* Built using React + Vite + TailwindCSS + TypeScript
+* Features:
+
+  * Book RO repair service (Instant + Slot-based)
+  * Chat with AI chatbot
+  * View product recommendations
+  * View transparent pricing before booking
+  * Buy RO products and AMC plans
+  * Track technician in real-time (basic simulation allowed)
+  * View service history
+
+---
+
+### 2. TECHNICIAN (WORKER) PLATFORM
+
+* Separate dashboard
+* Features:
+
+  * Register/Login (basic auth or JWT)
+  * Set availability (online/offline)
+  * Accept/reject jobs
+  * View assigned jobs
+  * Update job status
+  * Generate bill (auto from selected parts)
+  * View earnings
+
+---
+
+### 3. BACKEND (NODE.JS)
+
+* Use Node.js + Express
+
+* Structure:
+
+  * controllers/
+  * routes/
+  * services/
+  * models/
+  * middleware/
+
+* Features:
+
+  * Booking system (instant + scheduled)
+  * Technician matching (nearest available logic)
+  * Pricing calculation system
+  * REST APIs for all features
+  * Authentication (JWT)
+
+---
+
+### 4. DATABASE (POSTGRESQL - NEON)
+
+Design full schema:
+
+Tables:
+
+* users
+* technicians
+* bookings
+* products
+* amc_plans
+* parts
+* pricing
+* reviews
+* payments
+
+Include relationships and sample data.
+
+---
+
+### 5. AI CHATBOT (AGENTIC AI)
+
+Build an AI agent using:
+
+* OpenAI API or similar
+* LangChain (preferred)
+
+The chatbot must:
+
+#### Capabilities:
+
+1. Diagnose RO problems
+2. Recommend products
+3. Suggest repair vs replace
+4. Provide pricing estimates
+5. Book service via chat
+6. Answer FAQs
+7. Suggest AMC plans
+
+---
+
+### 6. AI TOOLS (VERY IMPORTANT)
+
+Implement these tools:
+
+* diagnose_issue(symptoms)
+* recommend_product(requirements)
+* get_price_estimate(issue)
+* book_service(date, time, location)
+* get_water_quality(city)
+* get_product_details(product_name)
+
+---
+
+### 7. KNOWLEDGE BASE (RAG)
+
+Include:
+
+* RO troubleshooting guides
+* Product descriptions
+* FAQ
+
+Use:
+
+* Vector DB (Chroma or Pinecone)
+
+---
+
+### 8. TRANSPARENT PRICING SYSTEM
+
+Use this exact pricing:
+
+Carbon Filter → ₹450
+Sediment Filter → ₹450
+Membrane → ₹1250–1650
+Spun Filter → ₹150–250
+Adapter → ₹750
+Solenoid Valve → ₹450
+RO Pump → ₹1650–1850
+Flow Resistor → ₹100
+Tape → ₹100
+UV Lamp → ₹350
+UV Adapter → ₹350
+Filter Kit → ₹1050
+Full Kit → ₹2250
+
+---
+
+### Pricing Logic:
+
+* Based on issue → suggest parts
+* Show price breakdown:
+
+  * Parts cost
+  * Service charge
+  * Total
+
+---
+
+### 9. MATCHING ENGINE
+
+Implement logic:
+
+* Find nearest technician
+* Filter by availability
+* Assign job
+* Allow accept/reject
+
+---
+
+### 10. UI REQUIREMENTS
+
+* Modern UI using Tailwind + ShadCN
+* Chatbot UI with:
+
+  * Message bubbles
+  * Product cards
+  * Booking buttons
+* Pricing breakdown UI
+* Dashboard for worker
+
+---
+
+### 11. API ENDPOINTS
+
+Create full REST APIs:
+
+Examples:
+
+POST /api/book-service
+GET /api/products
+POST /api/chat
+GET /api/technicians/nearby
+POST /api/estimate-cost
+
+---
+
+### 12. BONUS FEATURES
+
+* Voice chatbot (optional)
+* WhatsApp integration (mock)
+* Image upload for issue detection (optional stub)
+* AMC subscription system
+
+---
+
+## 🧱 OUTPUT FORMAT
+
+You must provide:
+
+1. Full folder structure
+2. Backend code (Express)
+3. Frontend code (React)
+4. Database schema (SQL)
+5. AI agent implementation (LangChain/OpenAI)
+6. API documentation
+7. Setup instructions (step-by-step)
+8. .env configuration
+9. Sample test data
+10. Deployment guide (Vercel + backend)
+
+---
+
+## ⚠️ IMPORTANT RULES
+
+* Write clean, modular, production-level code
+* Use TypeScript where possible
+* Include comments
+* Avoid placeholders — implement real logic
+* Make it runnable end-to-end
+
+---
+
+## 🎯 GOAL
+
+The final system should:
+
+* Allow users to chat, diagnose, and book services
+* Show transparent pricing
+* Connect customers with technicians
+* Act like a real startup product
+
+---
+
+Now generate the complete implementation step-by-step.
